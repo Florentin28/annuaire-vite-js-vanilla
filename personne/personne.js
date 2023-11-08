@@ -1,13 +1,13 @@
-import * as bootstrap from 'bootstrap';
-import '../style.scss';
-import { data } from '../data';
-import { nav } from '../nav';
+import * as bootstrap from "bootstrap";
+import "../style.scss";
+import { data } from "../data";
+import { nav } from "../nav";
 
 const detailsPersonne = () => {
   // récupération des paramètres GET de l'url
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
-  const personneId = urlParams.get('id') ?? 1;
+  const personneId = urlParams.get("id") ?? 1;
   console.log(personneId);
 
   // on cherche la personne qui possède l'id trouvé dans l'url
@@ -22,14 +22,17 @@ const detailsPersonne = () => {
         <div class="card-body">
           <h5 class="card-title">${personne.prenom} ${personne.nom}</h5>
           <p class="card-text">
-            ...
+         Date de naissance :  ${personne.date_de_naissance}<br>
+         Numéro de téléphone : ${personne.numero_de_telephone}<br>
+         Adresse email : ${personne.adresse_email}<br>
+         Description : ${personne.description}          
           </p>
         </div>
       </div>
     `;
 };
 
-document.querySelector('#app').innerHTML = `
+document.querySelector("#app").innerHTML = `
   <main>
     ${nav}
 
