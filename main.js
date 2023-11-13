@@ -1,5 +1,4 @@
-import * as bootstrap from "bootstrap";
-import "./style.scss";
+import "./style.css";
 import { data } from "./data";
 import { nav } from "./nav";
 import Fuse from "fuse.js";
