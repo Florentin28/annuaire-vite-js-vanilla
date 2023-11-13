@@ -1,16 +1,12 @@
-export const nav =  `
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/">Annuaire</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Accueil</a>
-          </li>
-        </ul>
+export const nav = `
+  <nav class="bg-gray-800 p-4">
+    <div class="container mx-auto flex items-center justify-between">
+      <a class="text-white text-xl font-bold" href="/">Annuaire</a>
+      <div class="flex space-x-4">
+        <a class="text-white" href="/">Accueil</a>
+        <a class="text-white" href="/">Contact</a>
+        <a class="text-white" href="/">A propos</a>
+        <a class="text-white" href="/">Informations</a>
       </div>
     </div>
   </nav>

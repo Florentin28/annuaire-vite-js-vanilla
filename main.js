@@ -1,3 +1,4 @@
+import * as bootstrap from "bootstrap";
 import "./style.css";
 import { data } from "./data";
 import { nav } from "./nav";
@@ -29,7 +30,7 @@ function afficherPersonnes(personnes) {
     .map(
       (personne) => `
         <a class="card col-5 col-md-3" href="/personne/?id=${personne.id}">
-          <img src="${personne.avatar}" class="card-img-top" alt="avatar de ${personne.prenom} ${personne.nom}">
+          <img src="${personne.avatar}" class="card-img-top w-30 h-30 object-cover" alt="avatar de ${personne.prenom} ${personne.nom}">
           <div class="card-body">
             <h5 class="card-title">${personne.prenom} ${personne.nom}</h5>
           </div>
@@ -44,11 +45,11 @@ document.querySelector("#app").innerHTML = `
   <main>
     ${nav}
 
-    <div class="container-fluid my-4">
+    <div class="container my-4">
       <div class="mb-3">
-        <input type="text" id="recherche" class="form-control" placeholder="Rechercher par nom ou prénom">
+        <input type="text" id="recherche" class="form-input w-full md:w-1/2 lg:w-1/3" placeholder="Rechercher par nom ou prénom">
       </div>
-      <div id="personnes" class="d-flex gap-3 flex-wrap justify-content-center">
+      <div id="personnes" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
       </div>
     </div>
   </main>
